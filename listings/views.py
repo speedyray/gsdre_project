@@ -27,11 +27,55 @@ def listing(request, listing_id):
 
 
 def search(request):
+    queryset_list = Listing.objects.order_by('-list_date')
+
+    # KEYWORDS - check if keywords exist
+    if 'keywords' in request.GET:
+        keywords = request.GET['keywords']
+        # check if keywords is not an empty listing
+        if keywords:
+            queryset_list = queryset_list.filter(description__icontains=keywords)
+
+    # CITY- check if city exist
+    if 'city' in request.GET:
+        city = request.GET['city']
+        # check if city is not an empty listing
+        if city:
+            queryset_list = queryset_list.filter(city__iexact=city)
+
+
+    # STATE- check if state exist
+    if 'state' in request.GET:
+        state = request.GET['state']
+        # check if state is not an empty listing
+        if state:
+            queryset_list = queryset_list.filter(state__iexact=state)
+
+
+    # BEDROOMS - check if bedrooms exist
+    if 'bedrooms' in request.GET:
+        bedrooms = request.GET['bedrooms']
+        # check if bedrooms is not an empty listing
+        if bedrooms:
+            queryset_list = queryset_list.filter(bedrooms__lte=bedrooms)
+
+
+     # PRICE- check if PRICE exist
+    if 'price' in request.GET:
+        price = request.GET['price']
+        # check if price is not an empty listing
+        if price:
+            queryset_list = queryset_list.filter(price__lte=price)
+
+
+
 
     context = {
         'state_choices': state_choices,
         'bedroom_choices': bedroom_choices,
-        'price_choices': price_choices
+        'price_choices': price_choices,
+        'listings': queryset_list,
+        'values': request.GET
     }
 
     return render(request, 'listings/search.html', context )
