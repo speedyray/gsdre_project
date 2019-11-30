@@ -1,0 +1,14 @@
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '=6th)3@f*%km1$i$=(5s&ynml96(z6)39d4row8iqet(o6354j'
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gsdredb',
+        'USER': 'postgres',
+        'PASSWORD': 'pc2ray*24Biz',
+        'HOST': 'localhost',
+    }
+}

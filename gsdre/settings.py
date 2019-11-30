@@ -1,3 +1,5 @@
+
+
 """
 Django settings for gsdre project.
 
@@ -18,9 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '=6th)3@f*%km1$i$=(5s&ynml96(z6)39d4row8iqet(o6354j'
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,7 +83,6 @@ WSGI_APPLICATION = 'gsdre.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -90,6 +92,7 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
+
 
 
 # Password validation
