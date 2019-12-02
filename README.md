@@ -4,7 +4,7 @@ This project was created with django-admin startproject gsdre_project [https://d
 
 ## Available Scripts
 
-In the project directory, you can run:
+cd into the start_project directory, and then run:
 
 ### `python manage.py runserver`
 
