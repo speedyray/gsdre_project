@@ -1,5 +1,4 @@
-# gsdre_project
-Real Estate project built with Python Django framework
+# An Example Real Estate project built with Python Django Framework
 This project was created with django-admin startproject gsdre_project [https://docs.djangoproject.com/en/2.2/).
 
 ## Available Scripts
